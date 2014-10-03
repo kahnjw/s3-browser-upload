@@ -1,0 +1,36 @@
+{
+  "name": "s3-browser-upload",
+  "version": "0.0.1",
+  "description": "S3 Browser Upload",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kahnjw/s3-browser-upload.git"
+  },
+  "author": "kahnjw",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kahnjw/s3-browser-upload/issues"
+  },
+  "homepage": "https://github.com/kahnjw/s3-browser-upload",
+  "devDependencies": {
+    "bindpolyfill": "0.0.0",
+    "chai": "^1.9.2",
+    "karma": "^0.12.24",
+    "karma-browserifast": "^0.7.0",
+    "karma-cli": "0.0.4",
+    "karma-mocha": "^0.1.9",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "karma-spec-reporter": "0.0.13",
+    "lodash": "^2.4.1"
+  },
+  "dependencies": {
+    "lodash": "^2.4.1"
+  }
+}
