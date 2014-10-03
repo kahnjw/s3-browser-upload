@@ -1,19 +1,22 @@
 /* Based on code from: https://github.com/elasticsales/s3upload-coffee-javascript
 */
 
+var _ = require('lodash');
+
 function S3Upload(options) {
   if (options == null) {
     options = {};
   }
-  _.extend(this, options);
-  if (this.file_dom_selector) {
-    this.handleFileSelect($(this.file_dom_selector).get(0));
+
+  if (!options.el) {
+    throw new Error('S3 Browser Upload requires a `el` option, which is a DOM node');
   }
+
+  _.extend(this, options);
+  this.handleFileSelect(this.el);
 }
 
 S3Upload.prototype.s3_sign_put_url = '/signS3put';
-
-S3Upload.prototype.file_dom_selector = '#file_upload';
 
 S3Upload.prototype.onFinishS3Put = function(public_url, file) {
   return console.log('base.onFinishS3Put()', public_url, file);
